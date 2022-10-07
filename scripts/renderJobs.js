@@ -33,13 +33,14 @@ function render(array){
 
         s2.classList = 's2'
         
-        if(checkExisting(vacancy)){
+        if(checkExisting(vacancy) === -1){
             button.innerText = 'Candidatar'
             button.classList = 'button-candidatar'
         }else{
             button.innerText = 'Remover Candidatura'
             button.classList = 'button-remove'
         }
+
         button.id        = id
         button.addEventListener('click', () => {
             favorite(vacancy)

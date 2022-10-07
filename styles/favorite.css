@@ -9,7 +9,7 @@
 }
 
 .favoritCard > span {
-    width: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
