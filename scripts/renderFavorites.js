@@ -1,52 +1,54 @@
 const favoriteList = document.querySelector('.favoritList')
 
 function rederFavorites(){
+    
+    favoriteList.innerHTML = ''
+
     if(locationStorageUpdate().length > 0){
-        // let favoriteJobs = locationStorageUpdate()
+        let favoriteJobs = locationStorageUpdate()
 
-        // favoriteJobs.forEach(element => {
-        //     const {title, modalites} = element
+        favoriteJobs.forEach(element => {
+            const {title, modalities} = element
 
-        //     const li
-        //     const div
-        // });
-        console.log(favoriteJobs)
+            const li        = document.createElement("li")
+            const s1        = document.createElement("span")
+            const h2        = document.createElement("h2")
+            const s2        = document.createElement("span")
+            const button    = document.createElement("button")
+
+            let modalitiesArray = makeModalities(modalities)
+
+            li.classList = 'favoritCard'
+
+            h2.innerText = title
+
+            s2.append(...modalitiesArray)
+
+            button.innerHTML = `<img src="/assets/img/trash.svg" alt="trash"/>`
+
+            button.addEventListener('click', () => {
+                favorite(element)
+                rederFavorites()
+            })
+
+            s1.append(h2, s2)
+            li.append(s1,button)
+
+            favoriteList.append(li)
+        });
+
     }else{
-        
-        const div   = document.createElement('div')
-        const p     = document.createElement('p')
-        const svg   = document.createElement('svg')
-        const rect1 = document.createElement('rect')
-        const rect2 = document.createElement('rect')
-        const rect3 = document.createElement('rect')
-        const rect4 = document.createElement('rect')
-        const rect5 = document.createElement('rect') 
-
-        div.classList = 'noneItem'
-
-        p.innerText = 'você ainda não aplicou para nenhuma vaga'
-
-        svg.classList = 'SVG'
-
-        rect1.classList = 'rect r1'
-        rect2.classList = 'rect r2'
-        rect3.classList = 'rect r3'
-        rect4.classList = 'rect r4'
-        rect5.classList = 'rect r5'
-
-        svg.append(rect1,rect2,rect3,rect4,rect5)
-        div.append(p,svg)
-
-        favoriteList.append(div)
+       favoriteList.innerHTML = `
+        <div class="noneItem">
+        <p>você ainda não aplicou para nenhuma vaga</p>
+        <svg class="SVG">
+           <rect class="rect r1"></rect>
+           <rect class="rect r2"></rect>
+           <rect class="rect r3"></rect><rect class="rect r4"></rect><rect class="rect r5"></rect>
+        </svg>
+        </div>
+       `
     }
 }
 
 rederFavorites()
-{/* <div class="noneItem">
-    <p>você ainda não aplicou para nenhuma vaga</p>
-    <svg class="SVG">
-        <rect class="rect r1"></rect>
-        <rect class="rect r2"></rect>
-        <rect class="rect r3"></rect><rect class="rect r4"></rect><rect class="rect r5"></rect>
-    </svg>
-</div> */}

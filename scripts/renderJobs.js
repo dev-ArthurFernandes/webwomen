@@ -1,6 +1,8 @@
 function render(array){
     const jobsList   = document.querySelector('.vagas')
 
+    jobsList.innerHTML = ''
+
     array.forEach(vacancy => {
 
         const {id, title, enterprise, location, descrition, modalities} = vacancy 
@@ -31,10 +33,17 @@ function render(array){
 
         s2.classList = 's2'
         
-        button.innerText = 'Candidatar'
+        if(checkExisting(vacancy)){
+            button.innerText = 'Candidatar'
+            button.classList = 'button-candidatar'
+        }else{
+            button.innerText = 'Remover Candidatura'
+            button.classList = 'button-remove'
+        }
         button.id        = id
         button.addEventListener('click', () => {
             favorite(vacancy)
+            rederFavorites()
         })
 
         s3.append(...modalitiesArray)

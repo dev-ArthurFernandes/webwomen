@@ -17,6 +17,8 @@ function favorite(job){
     }else{
         favoriteList.splice(jobExists, 1)
     }
-
+    
     localStorage.setItem('@favoriteJobs', JSON.stringify(favoriteList))
+    
+    render(jobsData)
 }

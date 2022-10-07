@@ -2,21 +2,41 @@
     width: 100%;
     padding: 20px;
     border: 0.5px solid var(--color-grey-3);
+    border-radius: var(--radius-default);
+    display: flex;
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.279);
+    margin-bottom: 20px;
 }
 
-.favoritCard > div{
+.favoritCard > span {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.favoritCard > span > h2{
     width: 100%;
-    display: flex;    
+    font-size: var(--title-5);
 }
 
-.favoritCard > div > span > h2{
-
+.favoritCard > span > span{
+    display: flex;
+    gap: 20px;
 }
 
-.favoritCard > div > button{
+.favoritCard > button{
     width: 44px;
     height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-radius: var(--radius-default);
+    background-color: var(--color-grey-5);
+    cursor: pointer;
+}
+
+.favoritCard > button:hover{
+    background-color: var(--color-grey-4);
 }
