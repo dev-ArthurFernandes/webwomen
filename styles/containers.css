@@ -1,0 +1,26 @@
+.headerContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mainContainer{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 700px) {
+    .mainContainer{
+        margin-top: 100px;
+        flex-direction: row;
+    }
+
+    .mainContainer > h2{
+        position: absolute;
+        transform: translateY(-70px);
+    }
+}

@@ -1,0 +1,24 @@
+.left{
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left > ol{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right{
+    max-width: 503px;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--color-grey-6);
+}

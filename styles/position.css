@@ -1,0 +1,54 @@
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+.sticky{
+    position: sticky;
+}
+.static{
+    position: static;
+}
+
+.positionY{
+    transform: translateY(-980px);
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--color-grey-8);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    width: 1px;
+    background-color: var(--color-grey-2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-grey-1);
+}
+.flex{
+    display: flex;
+}
+
+.flex-justify{
+    justify-content: center;
+}
+
+.flex-item{
+    align-items: center;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}

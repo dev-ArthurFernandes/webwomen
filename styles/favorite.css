@@ -1,0 +1,22 @@
+.favoritCard{
+    width: 100%;
+    padding: 20px;
+    border: 0.5px solid var(--color-grey-3);
+}
+
+.favoritCard > div{
+    width: 100%;
+    display: flex;    
+}
+
+.favoritCard > div > span > h2{
+
+}
+
+.favoritCard > div > button{
+    width: 44px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  list-style: none;
 }
 
 img {
@@ -37,12 +38,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
-  width: 76rem;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+button{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.deBug{
+  border: 5px solid purple;
 }
 
 @media(max-width: 991px){
