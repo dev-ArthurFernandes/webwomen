@@ -62,7 +62,8 @@
 
 .card > .s2 > button{
     width: 100%;
-    height: 38px;
+    height: fit-content;
+    min-height: 38px;
     border-radius: 8px;
     cursor: pointer;
     transition: 150ms;
